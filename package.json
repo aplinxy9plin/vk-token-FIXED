@@ -1,0 +1,51 @@
+{
+  "_from": "vk-token",
+  "_id": "vk-token@0.1.2",
+  "_inBundle": false,
+  "_integrity": "sha1-LnlgBO2JMMAdh6oJZXagdl5eoYQ=",
+  "_location": "/vk-token",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "vk-token",
+    "name": "vk-token",
+    "escapedName": "vk-token",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vk-token/-/vk-token-0.1.2.tgz",
+  "_shasum": "2e796004ed8930c01d87aa096576a0765e5ea184",
+  "_spec": "vk-token",
+  "_where": "/Users/nikitaaplin/Documents/GitHub/LeonardoBotTelegram",
+  "author": {
+    "name": "_TrueLecter_"
+  },
+  "bugs": {
+    "email": "project@hostname.com"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "htmlparser2": "^3.9.1",
+    "request": "^2.74.0"
+  },
+  "deprecated": false,
+  "description": "VK access token",
+  "homepage": "https://github.com/TrueLecter/vk-token#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "vk-token",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TrueLecter/vk-token.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.2"
+}
