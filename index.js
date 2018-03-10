@@ -1,9 +1,9 @@
 var request = require("request");
 var htmlparser = require("htmlparser2");
 
-var APPID_ANDROID = 2890984;
-var APPID_IOS = 3087106;
-var APPID_WP = 3502561;
+var APPID_ANDROID = 4831307;
+var APPID_IOS = 4831307;
+var APPID_WP = 4831307;
 var DEFAULT_APP_ID = APPID_ANDROID;
 
 function sendAuthRequest(formAction, inputs, callback){
