@@ -15,7 +15,7 @@ vktoken.getAccessToken('login', 'password', function(error, token, response){
     case 'need_code':
       rl.question('Enter code: ', (code) => {
         vktoken.twoStep(response, code, function(token, error){
-          console.log('Your token is a ' + token);
+          console.log(token);
           process.exit()
         })
       })
