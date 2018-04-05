@@ -7,7 +7,6 @@ const rl = readline.createInterface({
 });
 
 vktoken.getAccessToken('login', 'password', function(error, token, response){
-  //console.log(token);
   switch (token) {
     case 'notoken':
       console.log('Bad login or password');
