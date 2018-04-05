@@ -1,18 +1,21 @@
 ## vk-token FIXED!!!
-I fix error, when you have no token. If you use bad login or password you will get a string: "notoken"
-
-Original repo: https://github.com/TrueLecter/vk-token
+I fix error, when you have no token and can't work with two step auth.
 
 Node js module to easily get vk token from login and password.
 
 ## Usage example
 
 ```js
-var vktoken = require('vk-token');
+var vktoken = require('vk-token-FIXED');
 
 vktoken.getAccessToken(username, password, function(error, token){
 	console.log(token);
 });
+
+vktoken.twoStep(response, code, function(token, error){
+	console.log(token);
+})
+
 ```
 
 ## Full signature
@@ -27,5 +30,8 @@ The callback argument gets 3 arguments:
     1. **error** - request module errors if any. **null** otherwise
     2. **token** - vk access token. **null** if any errors
     3. **response** - request module last response.
+    4. **response in two step auth** - url with autocheck.
 - **appid** - application id to use. If nothing is specified, android official app id is used. You can pass 'android', 'ios' or 'wp' as argument for specific platform.
 - **scopes** - comma-separated or array scopes list. Possible scopes are notify, friends, photos, audio, video, docs, notes, pages, status, offers, questions, wall, groups, messages, notifications, stats, ads, offline. Default are all of them.
+
+Original repo: https://github.com/TrueLecter/vk-token
