@@ -6,12 +6,24 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-vktoken.getAccessToken('', '', function(error, token){
-  rl.question('Enter code: ', (code) => {
-    vktoken.twoStep(token, code, function(){
+vktoken.getAccessToken('login', 'password', function(error, token, response){
+  //console.log(token);
+  switch (token) {
+    case 'notoken':
+      console.log('Bad login or password');
+      process.exit()
+      break;
+    case 'need_code':
+      rl.question('Enter code: ', (code) => {
+        vktoken.twoStep(response, code, function(token, error){
+          console.log('Your token is a ' + token);
+          process.exit()
+        })
+      })
+      break;
+    default:
+      // I get token!
       console.log(token);
-      console.log(code);
-    })
-  })
+      process.exit()
+  }
 })
-//vktoken.test()
